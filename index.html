@@ -1,1 +1,1000 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="canonical" href="https://luxelabai.com/"><meta name="description" content="LUXELAB AI — Ines Oussaifi, AI Lead CGI & Luxury Visual Designer."><title>Ines Oussaifi — AI Lead CGI & Luxury Visual Designer | LUXELAB AI</title></head><body><main><h1>LUXELAB AI</h1><p>Ines Oussaifi — AI Lead CGI & Luxury Visual Designer</p><p>Site deployment is configured for luxelabai.com.</p></main></body></html>
+<!DOCTYPE html>
+<!-- saved from url=(0058)/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://luxelabai.com/">
+    <title>Ines Oussaifi — AI Lead CGI &amp; Luxury Visual Designer | LUXELAB AI</title>
+    
+    <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./Ines Oussaifi  AI Lead CGI &amp; Luxury Visual Designer _ LUXELAB AI_files/css2" rel="stylesheet">
+
+    <style>
+        /* ==========================================================================
+           QUIET LUXURY SYSTEM (Alabaster & Carrara Marble Mode)
+           ========================================================================== */
+        :root {
+            --bg-alabaster: #FAF8F5;
+            --bg-pure: #FFFFFF;
+            --bg-card: #F4F0EA;
+            --bg-marble: #EDE8E0;
+            
+            --text-charcoal: #1A1918;
+            --text-body: #4F4B45;
+            --text-muted: #8F8A81;
+            
+            --accent-champagne: #C2A682;
+            --accent-champagne-soft: #E8DCB8;
+            --accent-bronze: #8E7352;
+            
+            --border-delicate: rgba(26, 25, 24, 0.08);
+            --border-hover: #C2A682;
+
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'Plus Jakarta Sans', sans-serif;
+
+            --ease-luxury: cubic-bezier(0.16, 1, 0.3, 1);
+            --transition-smooth: all 0.6s var(--ease-luxury);
+        }
+
+        /* Reset & Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            background-color: var(--bg-alabaster);
+            color: var(--text-body);
+            font-family: var(--font-sans);
+            font-weight: 300;
+            line-height: 1.8;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Ambient Texture Overlay */
+        .ambient-marble {
+            position: fixed;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 15% 15%, rgba(244, 240, 234, 0.8) 0%, transparent 40%),
+                radial-gradient(circle at 85% 85%, rgba(237, 232, 224, 0.5) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* Layout Container */
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 0 1.5rem; }
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, .serif {
+            font-family: var(--font-serif);
+            color: var(--text-charcoal);
+            font-weight: 300;
+            letter-spacing: -0.01em;
+        }
+
+        p {
+            font-weight: 300;
+        }
+
+        .section-tag {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: var(--accent-bronze);
+            margin-bottom: 1.2rem;
+            display: inline-block;
+            font-weight: 500;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: var(--transition-smooth);
+        }
+
+        /* Buttons */
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1.2rem 2.8rem;
+            background-color: var(--text-charcoal);
+            color: var(--bg-alabaster);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            border: 1px solid var(--text-charcoal);
+            transition: var(--transition-smooth);
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--text-charcoal);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1.2rem 2.8rem;
+            background-color: transparent;
+            color: var(--text-charcoal);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            border: 1px solid var(--border-delicate);
+            transition: var(--transition-smooth);
+            cursor: pointer;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent-champagne);
+            color: var(--accent-bronze);
+        }
+
+        /* ==========================================================================
+           HEADER / NAVIGATION
+           ========================================================================== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 2.2rem 0;
+            z-index: 1000;
+            background: rgba(250, 248, 245, 0.88);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(26, 25, 24, 0.05);
+            transition: var(--transition-smooth);
+        }
+
+        header.scrolled {
+            padding: 1.2rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-title {
+            font-family: var(--font-serif);
+            font-size: 1.6rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-charcoal);
+            line-height: 1;
+        }
+
+        .logo-sub {
+            font-size: 0.65rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--accent-bronze);
+            margin-top: 4px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 3.5rem;
+            list-style: none;
+        }
+
+        .nav-link {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--text-body);
+            position: relative;
+            padding-bottom: 4px;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--accent-champagne);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-link:hover::after { width: 100%; }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .mobile-toggle span {
+            width: 24px;
+            height: 1px;
+            background-color: var(--text-charcoal);
+        }
+
+        /* ==========================================================================
+           HERO SECTION
+           ========================================================================== */
+        .hero {
+            min-height: 100vh;
+            padding-top: 10rem;
+            padding-bottom: 6rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 5.5vw, 5.2rem);
+            line-height: 1.05;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .hero-lead {
+            font-size: 1.15rem;
+            color: var(--text-body);
+            max-width: 580px;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-frame {
+            position: relative;
+            padding: 1.8rem;
+            background: var(--bg-pure);
+            border: 1px solid var(--border-delicate);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.03);
+        }
+
+        .hero-img {
+            width: 100%;
+            height: 580px;
+            object-fit: cover;
+            filter: brightness(0.98) contrast(1.02);
+            transition: var(--transition-smooth);
+        }
+
+        .hero-frame-badge {
+            position: absolute;
+            bottom: -1.5rem;
+            right: -1.5rem;
+            background: var(--bg-alabaster);
+            padding: 1.2rem 2rem;
+            border: 1px solid var(--border-delicate);
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-size: 0.95rem;
+            color: var(--text-charcoal);
+        }
+
+        /* ==========================================================================
+           SERVICES & CREATIVE DIRECTION
+           ========================================================================== */
+        .services {
+            padding: 10rem 0;
+            background-color: var(--bg-pure);
+            border-top: 1px solid var(--border-delicate);
+            border-bottom: 1px solid var(--border-delicate);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 6rem auto;
+        }
+
+        .section-title {
+            font-size: clamp(2.4rem, 4vw, 3.6rem);
+            margin-bottom: 1.2rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+        }
+
+        .service-card {
+            background-color: var(--bg-alabaster);
+            padding: 4rem 3rem;
+            border: 1px solid var(--border-delicate);
+            transition: var(--transition-smooth);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-champagne);
+            box-shadow: 0 20px 40px rgba(194, 166, 130, 0.1);
+        }
+
+        .service-number {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            color: var(--accent-champagne);
+            margin-bottom: 2rem;
+            line-height: 1;
+        }
+
+        .service-heading {
+            font-size: 1.8rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .service-body {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: var(--text-body);
+            margin-bottom: 2.5rem;
+        }
+
+        .service-bullets {
+            list-style: none;
+            border-top: 1px solid var(--border-delicate);
+            padding-top: 1.8rem;
+        }
+
+        .service-bullets li {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--text-muted);
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .service-bullets li::before {
+            content: '—';
+            color: var(--accent-bronze);
+        }
+
+        /* ==========================================================================
+           SELECTED WORKS GALLERY (Filterable & Lightbox)
+           ========================================================================== */
+        .works {
+            padding: 10rem 0;
+        }
+
+        .works-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 4rem;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .filter-group {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: none;
+            border: none;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--text-muted);
+            cursor: pointer;
+            padding-bottom: 4px;
+            border-bottom: 1px solid transparent;
+            transition: var(--transition-smooth);
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            color: var(--text-charcoal);
+            border-bottom-color: var(--accent-bronze);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 2.5rem;
+        }
+
+        .gallery-card {
+            position: relative;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-delicate);
+            overflow: hidden;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 1.2s var(--ease-luxury);
+        }
+
+        .gallery-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(26, 25, 24, 0.85) 0%, rgba(26, 25, 24, 0) 65%);
+            opacity: 0;
+            transition: var(--transition-smooth);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2.5rem;
+            color: #FFFFFF;
+        }
+
+        .gallery-card:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-cat {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            color: var(--accent-champagne-soft);
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery-title {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            color: #FFFFFF;
+            font-weight: 300;
+        }
+
+        /* Editorial Grid Spans */
+        .span-8 { grid-column: span 8; height: 580px; }
+        .span-4 { grid-column: span 4; height: 580px; }
+        .span-5 { grid-column: span 5; height: 520px; }
+        .span-7 { grid-column: span 7; height: 520px; }
+        .span-6 { grid-column: span 6; height: 540px; }
+
+        /* ==========================================================================
+           ABOUT SECTION
+           ========================================================================== */
+        .about {
+            padding: 10rem 0;
+            background-color: var(--bg-pure);
+            border-top: 1px solid var(--border-delicate);
+            border-bottom: 1px solid var(--border-delicate);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            gap: 6rem;
+            align-items: center;
+        }
+
+        .about-portrait-frame {
+            position: relative;
+            padding: 1.8rem;
+            background: var(--bg-alabaster);
+            border: 1px solid var(--border-delicate);
+        }
+
+        .about-portrait-frame img {
+            width: 100%;
+            height: auto;
+            max-height: 640px;
+            object-fit: cover;
+            filter: contrast(1.02);
+        }
+
+        .about-portrait-frame::before {
+            content: '';
+            position: absolute;
+            inset: -12px;
+            border: 1px solid var(--accent-champagne-soft);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .about-bio-title {
+            font-size: clamp(2.8rem, 4.5vw, 3.8rem);
+            margin-bottom: 0.5rem;
+        }
+
+        .about-role {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            color: var(--accent-bronze);
+            margin-bottom: 2.5rem;
+            display: block;
+            font-weight: 500;
+        }
+
+        .about-quote {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--text-charcoal);
+            border-left: 2px solid var(--accent-champagne);
+            padding-left: 2rem;
+            margin: 2.5rem 0;
+            line-height: 1.6;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3.5rem;
+            padding-top: 2.5rem;
+            border-top: 1px solid var(--border-delicate);
+        }
+
+        .stat-num {
+            font-family: var(--font-serif);
+            font-size: 2.8rem;
+            color: var(--text-charcoal);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--text-muted);
+            margin-top: 0.5rem;
+        }
+
+        /* ==========================================================================
+           CONTACT & INQUIRIES
+           ========================================================================== */
+        .contact {
+            padding: 10rem 0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+        }
+
+        .contact-heading {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-meta {
+            list-style: none;
+            margin: 3.5rem 0;
+        }
+
+        .contact-meta li {
+            margin-bottom: 2rem;
+        }
+
+        .meta-label {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--text-muted);
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+
+        .meta-link {
+            font-family: var(--font-serif);
+            font-size: 1.6rem;
+            color: var(--text-charcoal);
+        }
+
+        .meta-link:hover {
+            color: var(--accent-bronze);
+        }
+
+        /* Minimalist Form Inputs */
+        .form-field {
+            position: relative;
+            margin-bottom: 3rem;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 1rem 0;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid var(--border-delicate);
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            color: var(--text-charcoal);
+            outline: none;
+            transition: var(--transition-smooth);
+        }
+
+        .form-input:focus {
+            border-bottom-color: var(--text-charcoal);
+        }
+
+        .form-label {
+            position: absolute;
+            top: 1rem;
+            left: 0;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--text-muted);
+            pointer-events: none;
+            transition: var(--transition-smooth);
+        }
+
+        .form-input:focus ~ .form-label,
+        .form-input:not(:placeholder-shown) ~ .form-label {
+            top: -1.2rem;
+            font-size: 0.68rem;
+            color: var(--accent-bronze);
+        }
+
+        textarea.form-input {
+            resize: vertical;
+            min-height: 110px;
+        }
+
+        /* ==========================================================================
+           LIGHTBOX MODAL
+           ========================================================================== */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(26, 25, 24, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition-smooth);
+            padding: 3rem;
+        }
+
+        .lightbox.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .lightbox-content {
+            max-width: 1100px;
+            width: 100%;
+            background: var(--bg-alabaster);
+            border: 1px solid var(--border-delicate);
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .lightbox-img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+        }
+
+        .lightbox-details {
+            padding: 4rem 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: var(--text-charcoal);
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        /* ==========================================================================
+           FOOTER
+           ========================================================================== */
+        footer {
+            padding: 5rem 0 3rem 0;
+            background-color: var(--bg-pure);
+            border-top: 1px solid var(--border-delicate);
+        }
+
+        .footer-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-note {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 992px) {
+            .hero-grid, .about-grid, .contact-grid, .services-grid {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+
+            .span-8, .span-4, .span-5, .span-7, .span-6 {
+                grid-column: span 12;
+                height: 440px;
+            }
+
+            .nav-menu { display: none; }
+            .mobile-toggle { display: flex; }
+
+            .lightbox-content {
+                grid-template-columns: 1fr;
+                max-height: 85vh;
+                overflow-y: auto;
+            }
+
+            .lightbox-img { height: 350px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ambient-marble"></div>
+
+    <!-- HEADER / NAVIGATION -->
+    <header id="header" class="">
+        <div class="container">
+            <nav>
+                <a href="#" class="brand-logo">
+                    <span class="logo-title">LUXELAB AI</span>
+                    <span class="logo-sub">Ines Oussaifi Studio</span>
+                </a>
+
+                <ul class="nav-menu">
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#works" class="nav-link">Works</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link">Inquire</a></li>
+                </ul>
+
+                <button class="mobile-toggle" onclick="alert(&#39;Menu navigation&#39;)">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div>
+                    <span class="section-tag">AI Lead CGI &amp; Digital Architecture</span>
+                    <h1 class="hero-title">Merging Timeless Luxury with AI Precision</h1>
+                    <p class="hero-lead">
+                        Virtual spatial curation, photorealistic fashion CGI, and Quiet Luxury digital identity designed for global heritage houses.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#works" class="btn-primary">Selected Works</a>
+                        <a href="#contact" class="btn-secondary">Private Inquiry</a>
+                    </div>
+                </div>
+
+                <div class="hero-frame">
+                    <img src="./Ines Oussaifi  AI Lead CGI &amp; Luxury Visual Designer _ LUXELAB AI_files/20250123_161104_0000.jpg" alt="Virtual Atrium Concept" class="hero-img">
+                    <div class="hero-frame-badge">The Grand Atrium — Spatial CGI</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Studio Disciplines</span>
+                <h2 class="section-title">Quiet Luxury Curation for the Digital Era</h2>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div>
+                        <span class="service-number">01</span>
+                        <h3 class="service-heading">AI Lead CGI &amp; Hyper-Real Visuals</h3>
+                        <p class="service-body">
+                            Creating photorealistic digital apparel, silk textile simulations, fine jewelry renderings, and digital campaign stills for luxury fashion houses.
+                        </p>
+                    </div>
+                    <ul class="service-bullets">
+                        <li>Textile Physics &amp; Drape Simulation</li>
+                        <li>High Jewelry Light Rendering</li>
+                        <li>High-Resolution Campaign CGI</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div>
+                        <span class="service-number">02</span>
+                        <h3 class="service-heading">Luxury Brand Identity &amp; Atelier</h3>
+                        <p class="service-body">
+                            Developing generative brand systems, moodboards, and bespoke visual languages aligned with European haute couture traditions.
+                        </p>
+                    </div>
+                    <ul class="service-bullets">
+                        <li>AI Model Training for Brand Archives</li>
+                        <li>Couture Silk &amp; Pattern Direction</li>
+                        <li>Algorithmic Lookbooks</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div>
+                        <span class="service-number">03</span>
+                        <h3 class="service-heading">Virtual Architecture &amp; Spatial Curation</h3>
+                        <p class="service-body">
+                            Designing monumental virtual flagship stores, digital fashion show sets, and metaverse exhibition pavilions.
+                        </p>
+                    </div>
+                    <ul class="service-bullets">
+                        <li>Digital Flagship Retail Stores</li>
+                        <li>Set Design for Digital Fashion Weeks</li>
+                        <li>Exhibition &amp; Spatial Scenography</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SELECTED WORKS GALLERY -->
+    <section class="works" id="works">
+        <div class="container">
+            <div class="works-nav">
+                <div>
+                    <span class="section-tag">Portfolio</span>
+                    <h2 class="section-title">Selected Studio Projects</h2>
+                </div>
+
+                <!-- Filter Controls -->
+                <ul class="filter-group">
+                    <li><button class="filter-btn active" onclick="filterGallery(&#39;all&#39;, this)">All Works</button></li>
+                    <li><button class="filter-btn" onclick="filterGallery(&#39;architecture&#39;, this)">Virtual Architecture</button></li>
+                    <li><button class="filter-btn" onclick="filterGallery(&#39;runway&#39;, this)">Fashion Runways</button></li>
+                    <li><button class="filter-btn" onclick="filterGallery(&#39;retail&#39;, this)">Retail Concepts</button></li>
+                </ul>
+            </div>
+
+            <div class="gallery-grid" id="galleryGrid">
+                
+                <!-- Project 1 -->
+                <div class="gallery-card span-8 architecture" onclick="openLightbox(&#39;Whisk_c6ca2c16b7f7297aec14f4394735e897dr.jpeg&#39;, &#39;The Grand Atrium Pavilion&#39;, &#39;Virtual Architecture&#39;, &#39;A multi-level spatial design featuring soaring alabaster columns, grand staircases, and subtle ambient lighting.&#39;)">
+                    <img src="./Ines Oussaifi  AI Lead CGI &amp; Luxury Visual Designer _ LUXELAB AI_files/Whisk_c6ca2c16b7f7297aec14f4394735e897dr.jpeg" alt="Grand Atrium">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat">Virtual Architecture</span>
+                        <h3 class="gallery-title">The Grand Atrium Pavilion</h3>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="gallery-card span-4 retail" onclick="openLightbox(&#39;Whisk_69ce6a21064c202b4ec47bab11f16fc6dr.jpeg&#39;, &#39;Luminous Exterior Glass Facade&#39;, &#39;Retail Concept&#39;, &#39;Organic curved glass architecture with warm inner amber illumination designed for flagships.&#39;)">
+                    <img src="./Ines Oussaifi  AI Lead CGI &amp; Luxury Visual Designer _ LUXELAB AI_files/Whisk_69ce6a21064c202b4ec47bab11f16fc6dr.jpeg" alt="Luminous Exterior">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat">Retail Concept</span>
+                        <h3 class="gallery-title">Luminous Curved Glass Facade</h3>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="gallery-card span-5 runway" onclick="openLightbox(&#39;Whisk_ac3e53ee593e8e7b50949b7bba1f0a9fdr.jpeg&#39;, &#39;Monolithic Screen Runway&#39;, &#39;Fashion Runway&#39;, &#39;Immersive dynamic rain and storm screen design for digital fashion presentation.&#39;)">
+                    <img src="./Ines Oussaifi  AI Lead CGI &amp; Luxury Visual Designer _ LUXELAB AI_files/Whisk_ac3e53ee593e8e7b50949b7bba1f0a9fdr.jpeg" alt="Runway Screens">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat">Fashion Runway</span>
+                        <h3 class="gallery-title">Monolithic Screen Runway Set</h3>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="gallery-card span-7 architecture" onclick="openLightbox(&#39;Whisk_eae8a9bde0.jpg&#39;, &#39;Helical Staircase Study&#39;, &#39;Spatial Design&#39;, &#39;Light-filled helical interior featuring glass balustrades and natural wood accents.&#39;)">
+                    <img src="./Ines Oussaifi  AI Lead CGI &amp; Luxury Visual Designer _ LUXELAB AI_files/Whisk_eae8a9bde0.jpg" alt="Helical Staircase">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat">Spatial Interior</span>
+                        <h3 class="gallery-title">Helical Staircase Study</h3>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="gallery-card span-6 retail" onclick="openLightbox(&#39;Whisk_8f71f74b000b97294d645fd4973da5a1dr.jpeg&#39;, &#39;High Jewellery Salon&#39;, &#39;Retail Concept&#39;, &#39;Carrara marble and brass jewelry salon designed for high-net-worth consultations.&#39;)">
+                    <img src="./Ines Oussaifi  AI Lead CGI &amp; Luxury Visual Designer _ LUXELAB AI_files/Whisk_8f71f74b000b97294d645fd4973da5a1dr.jpeg" alt="Jewellery Salon">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat">Retail Interior</span>
+                        <h3 class="gallery-title">High Jewellery Salon</h3>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="gallery-card span-6 runway" onclick="openLightbox(&#39;Whisk_b0e5992877e1b38b47d4a8143404ff1adr.jpeg&#39;, &#39;The Amphitheater Runway&#39;, &#39;Fashion Runway&#39;, &#39;Sinuous curved runway layout surrounding formal guest seating.&#39;)">
+                    <img src="./Ines Oussaifi  AI Lead CGI &amp; Luxury Visual Designer _ LUXELAB AI_files/Whisk_b0e5992877e1b38b47d4a8143404ff1adr.jpeg" alt="Curved Runway">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat">Fashion Runway</span>
+                        <h3 class="gallery-title">The Amphitheater Runway</h3>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="gallery-card span-7 runway" onclick="openLightbox(&#39;Whisk_d3cf3a5db1ea3cd9f394fe150def45a7dr.jpeg&#39;, &#39;Palatial Heritage Runway&#39;, &#39;Fashion Runway&#39;, &#39;Combining classic gilded chandeliers with high-contrast reflective black marble floors.&#39;)">
+                    <img src="./Ines Oussaifi  AI Lead CGI &amp; Luxury Visual Designer _ LUXELAB AI_files/Whisk_d3cf3a5db1ea3cd9f394fe150def45a7dr.jpeg" alt="Palace Runway">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat">Fashion Runway</span>
+                        <h3 class="gallery-title">Palatial Heritage Runway</h3>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="gallery-card span-5 retail" onclick="openLightbox(&#39;Whisk_da463e4118b9ab1841f480d866d15e72dr.jpeg&#39;, &#39;Reflective Black Marble Boutique&#39;, &#39;Retail Concept&#39;, &#39;Quilted wall textures paired with polished obsidian marble flooring.&#39;)">
+                    <img src="./Ines Oussaifi  AI Lead CGI &amp; Luxury Visual Designer _ LUXELAB AI_files/Whisk_da463e4118b9ab1841f480d866d15e72dr.jpeg" alt="Black Marble Boutique">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat">Retail Concept</span>
+                        <h3 class="gallery-title">Reflective Obsidian Boutique</h3>
+                    </div>
